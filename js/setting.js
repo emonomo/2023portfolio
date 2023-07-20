@@ -62,6 +62,28 @@
         });
          //讓letter, allItem都有此變色效果
 
+
+//眼睛轉轉
+
+function calculateEyePosition(eyeContainer, event) {
+  var eye = eyeContainer.find(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = (rad * (180 / Math.PI) * -1) + 90;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+}
+
+$(document).mousemove(function(event) {
+  calculateEyePosition($("#below_bow"), event);
+  calculateEyePosition($(".tools_r"), event);
+});
+
 //tools & skill scroll
         // 获取第一个和第二个 tools_r 元素
         var toolsElements = document.querySelectorAll(".tools_r");
@@ -110,27 +132,7 @@
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
           );
         }
-//mouseover 跑馬燈
 
-      var marqueeContainer = document.querySelector(".right_gotop");
-      var marqueeAnimation;
-
-      marqueeContainer.addEventListener('mouseenter', function() {
-        // 鼠标进入时开始滚动
-        marqueeAnimation = marqueeContainer.querySelector('ul').animate([
-          { transform: 'translateX(0)' },
-          { transform: 'translateX(-16.6%)' }
-        ], {
-          duration: 2500, // 动画时长
-          iterations: Infinity, // 无限循环
-          easing: 'linear' // 线性动画
-        });
-      });
-
-      marqueeContainer.addEventListener('mouseleave', function() {
-        // 鼠标离开时停止滚动
-        marqueeAnimation.pause();
-      });
 
 // 甜甜那般的
 $(document).ready(function () {

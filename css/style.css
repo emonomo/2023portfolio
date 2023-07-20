@@ -125,7 +125,7 @@ h1,h2,h3,p{
     /* e_h3 */
     .e_h3{
         /*font-size: 1.25rem;*/
-        font-size: clamp(1.25rem, 4vw,1.5rem);
+        font-size: clamp(1rem, 2vw,1.5rem);
         font-weight: 400;
         line-height: 126%;
     }
@@ -146,7 +146,7 @@ h1,h2,h3,p{
     /* h3 */
     h3{
         font-size: 1.125rem;
-        line-height: 120.3%;
+        line-height: 160.3%;
         letter-spacing: 0.18rem;    
     }
     /* e_p */
@@ -338,24 +338,130 @@ h1,h2,h3,p{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
       flex: .4;
     }
     /* 臉 */
     #below_bow .face_box{
       display: flex;
+      box-sizing: border-box;
       justify-items: center;
       align-items: center;
       width: 20%;
+      height: 100%;
       margin-left: 10%;
+
+      position: relative;
     }
+
+    .face_box .img_rotate{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    .face_box .img_rotate svg{
+      width: 100%;
+      animation: rolling 6.5s linear infinite;
+    }
+
+    @keyframes rolling{
+      0% {
+        transform: rotate(0deg);
+      } 
+      100% {
+        transform: rotate(360deg);
+        } 
+    }
+    /* 要刪掉temp
+    .face_box .temp{
+      opacity: .3;
+      z-index: 3;
+    } */
+    .face_box .smile{
+      position: absolute;
+      width: 40%;
+      top: 59%;
+      left: 30%;
+    }
+
+    /* eye */
+    .eyebox-l{
+      position: absolute;
+      /* background-color: #f39e2f; */
+      width: 16%;
+      height: 22%;
+      top: 30%;
+      left: 31%;
+    }
+    .eyebox-r{
+      position: absolute;
+      /* background-color: #f39e2f; */
+      width: 16%;
+      height: 22%;
+      top: 30%;
+      left: 56%;
+    }
+
+    /* 眼珠 */   
+    .eye{
+      position: absolute;
+      box-sizing: border-box;
+      content: "";
+      display: flex;
+      width: 113%;
+      left: -7%;
+      top: 14%;
+      height: 85%;
+    }
+    .eye::after{
+      content: " ";
+      bottom: 25px;
+      right: 10px;
+      position: absolute;
+      width: 43%;
+      height: 43%;
+      background: #4FA1BB;
+      border-radius: 15px;
+    }
+    /* 眼白 */
+    .eyebox-l::before,
+    .eyebox-r::before{
+      position: absolute;
+      display: flex;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 50%;
+      border:1px solid #888;
+    }
+    /* 眼皮 */
+    .eyebox-l::after,
+    .eyebox-r::after{
+      position: absolute;
+      box-sizing: border-box;
+      content: "";
+      display: flex;
+      width: 100%;
+      left: 1.5%;
+      height: 37%;
+      background: #9FE1D9;
+      border: 1px solid #4FA1BB;
+      border-radius: 50%/100% 100% 0 0;
+    }
+
+   /* 臉結束------------- */
+
+
     /* 文字+menu按鈕的容器 */
     #below_bow .intro_box{
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-content: flex-end;
-      margin-top: -26vh;
+      margin-top: -40vh;
     }
     #below_bow .intro_box .title_2{
       color: #888;
@@ -436,11 +542,11 @@ h1,h2,h3,p{
       padding-left: 9%;
     }
 
-    #tools .double_circle{
+    .double_circle{
       margin-left: -4%;
       width: 18%;
     }
-    #tools .double_circle::before,.double_circle::after{
+    .double_circle::before,.double_circle::after{
       content: "";
       width:230px;
       display: block;
@@ -449,7 +555,7 @@ h1,h2,h3,p{
       border-radius: 50%;
       border: #333 1px solid;
     }
-    #tools .double_circle::after{
+    .double_circle::after{
       transform: rotate(-30deg) translateY(-22px) translateX(-21%);
     }
 
@@ -602,13 +708,13 @@ h1,h2,h3,p{
       padding: 3% 0;
     }
     /* 按鈕動畫 */
-     #projects .tools_l .tools_l_bottom .poject_btn li{
+      .poject_btn li{
       position: relative;
       display: flex;
       padding: 0 2.5%;
       justify-content: center;
     }
-    #projects .tools_l .tools_l_bottom .poject_btn li:after {
+     .poject_btn li:after {
       content: '';
       display: block;
       position: absolute;
@@ -620,7 +726,7 @@ h1,h2,h3,p{
       background-color: #4FA1BB;
       transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     }
-    #projects .tools_l .tools_l_bottom .poject_btn li:hover:after {
+     .poject_btn li:hover:after {
       transform: scaleX(1);
       transform-origin: left;
       transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -703,6 +809,41 @@ h1,h2,h3,p{
       transition: all 0.3s ease-in;
     }
 
+    /* 臉 */
+
+    #projects .face_box{
+      display: flex;
+      box-sizing: border-box;
+      justify-items: center;
+      align-items: center;
+      width: 20%;
+      height: 100%;
+      margin-left: 10%;
+
+      position: relative;
+    }
+    
+    /* 眼珠 */   
+    #projects .eye{
+      position: absolute;
+      box-sizing: border-box;
+      content: "";
+      display: flex;
+      width: 118%;
+      left: -5%;
+      top: 22%;
+      height: 76%;
+    }
+    #projects .eye::after{
+      content: " ";
+      bottom: 25px;
+      right: 10px;
+      position: absolute;
+      width: 35%;
+      height: 35%;
+      background: #4FA1BB;
+      border-radius: 15px;
+    }
 /* --------------5.list---------------- */  
     #list_box .list .title_2{
       display: flex;
@@ -721,20 +862,10 @@ h1,h2,h3,p{
     #list_box .detail h1{
      display: block;
      position: relative;
+
+     line-height: 80px;
     }
 
-    /* #list_box .detail h1:after {
-      display: block;
-      position: absolute;
-
-      content: attr(data-hover-name);
-      color: rgb(255, 255, 255);
-      height: 100%;
-      width: 100%;
-      top: 0;
-      opacity: 0;
-      transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
-    } */
     #list_box .detail h1:before {
       content: '';
       display: block;
@@ -759,6 +890,38 @@ h1,h2,h3,p{
       transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     }
 
+    #list_box .detail h1:after {
+      content: '';
+      display: block;
+      position: absolute;
+      opacity: 0;
+      height:12px;
+      width: 12px;
+      border-radius: 50%;
+      top: 50%;
+      left: 115%;
+      background-color: rgba(79, 161, 187, 0.5);
+      transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), opacity 0.6s ease; /* 添加 opacity 過渡效果 */
+    }
+    
+    #list_box a:hover h1:after {
+      animation: scaleAnimation 1s infinite;
+      animation-delay: 0.5s; /* 加入延遲時間，使其稍晚開始縮放 */
+    }
+    
+    @keyframes scaleAnimation {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 
      /* 一排1 */
 
@@ -851,7 +1014,7 @@ h1,h2,h3,p{
   }
 
    /* right-side */
-   #bottom_box .right_gotop{
+   .right_gotop{
     position: relative;
     width: 100%;
     height: 100%;
@@ -863,11 +1026,11 @@ h1,h2,h3,p{
     cursor: pointer;
    }
 
-   #bottom_box .right_gotop ul{
+  .right_gotop ul{
     position: absolute;
     display: inline-flex;
   }
-  #bottom_box .right_gotop li{
+  .right_gotop li{
     color: #fff;
   }
 /* --------------end.footer---------------- */  
