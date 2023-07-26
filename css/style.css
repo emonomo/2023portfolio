@@ -156,6 +156,9 @@ h1,h2,h3,p{
         line-height: 150%;
         letter-spacing: 0.05rem;
     }
+    p{
+      line-height: 1.8rem;
+    }
 
 
     
@@ -781,7 +784,7 @@ h1,h2,h3,p{
     #projects .tools_r .text>*:first-child{
       padding-bottom: 2%;
     }
-    #projects .tools_r .contact_btn{
+    .contact_btn{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -789,7 +792,7 @@ h1,h2,h3,p{
       padding: 0px 13%;
     }
 
-    #projects .tools_r .contact_btn .btnMark{
+    .contact_btn .btnMark{
       width: 28%;
       border-radius: 50%;
       height: 60px;
@@ -798,11 +801,11 @@ h1,h2,h3,p{
       line-height: 60px;
       transform: rotate(-4.456deg);
     }
-    #projects .tools_r .contact_btn .btnMark span{
+    .contact_btn .btnMark span{
       display: block;
       transform: rotate(4.456deg);
     }
-    #projects .tools_r .contact_btn .btnMark:hover{
+    .contact_btn .btnMark:hover{
       background-color: rgba(79, 161, 187, 0.7);
       z-index: 8;
       color: #fff;

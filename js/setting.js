@@ -82,6 +82,8 @@ function calculateEyePosition(eyeContainer, event) {
 $(document).mousemove(function(event) {
   calculateEyePosition($("#below_bow"), event);
   calculateEyePosition($(".tools_r"), event);
+  calculateEyePosition($("#about"), event);
+  console.log("enddd")
 });
 
 //tools & skill scroll
