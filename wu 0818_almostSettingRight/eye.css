@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Proza+Libre:wght@400;500;600;700&display=swap');
+
+/*eric css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;  /*不累加邊框與內距 rwd 甜甜*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* 捲軸滑動效果 
+html,body{
+	scroll-behavior: smooth;
+}
+*/
+body {
+	line-height: 1;
+    font-family: /*⻄文*/ -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/ "蘋方-繁", "PingFang TC", "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+ol, ul ,li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 共用 */
+img {
+    display: block; /*本來是inline-block,會有空白間距*/
+    width: 100%;
+}
+
+
+/* 我自己新增共用 */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+/* ---------------------------------- */
+main{
+    width: 100%;
+    height: 100vh;
+    margin: 100px;
+}
+/* 臉 */
+.face_box{
+    position: relative;
+
+    display: flex;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+    width: 20%;
+    height: 38%;
+  }
+  .face_box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* 要刪掉temp
+  .face_box .temp{
+    opacity: .3;
+    z-index: 3;
+  } */
+  .face_box .smile{
+    position: absolute;
+    width: 40%;
+    top: 59%;
+    left: 30%;
+  }
+
+  /* eye */
+  .eyebox-l{
+    position: absolute;
+    /* background-color: #f39e2f; */
+    width: 16%;
+    height: 22%;
+    top: 30%;
+    left: 31%;
+  }
+  .eyebox-r{
+    position: absolute;
+    /* background-color: #f39e2f; */
+    width: 16%;
+    height: 22%;
+    top: 30%;
+    left: 56%;
+  }
+  
+/* 眼珠 */
+  .eye::after{
+    content: " ";
+    bottom: 25px;
+    right: 10px;
+    position: absolute;
+    width: 45%;
+    height: 42%;
+    background: #4FA1BB;
+    border-radius: 15px;
+  }
+
+  .eyebox-l::before,
+  .eyebox-r::before{
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    border:1px solid #888;
+  }
+/* 眼皮 */
+  .eyebox-l::after,
+  .eyebox-r::after{
+    position: absolute;
+    box-sizing: border-box;
+    content: "";
+    display: flex;
+    width: 100%;
+    left: 1.5%;
+    height: 37%;
+    background: #9FE1D9;
+    border: 1px solid #4FA1BB;
+    border-radius: 50%/100% 100% 0 0;
+  }
+
+  .eye{
+    position: absolute;
+    box-sizing: border-box;
+    content: "";
+    display: flex;
+    width: 112%;
+    left: -4%;
+    top: 12%;
+    height: 90%;
+}
+
+
+
