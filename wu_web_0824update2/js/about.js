@@ -1,16 +1,16 @@
-const loader = document.querySelector('.loader--text');
+// const loader = document.querySelector('.loader--text');
 
-const showDemo = () => {
-  // 開始顯示加載畫面
-  gsap.to(document.querySelector('.loader'), { autoAlpha: 1 });
+// const showDemo = () => {
+//   // 開始顯示加載畫面
+//   gsap.to(document.querySelector('.loader'), { autoAlpha: 1 });
 
-  // 監聽 DOMContentLoaded 事件，當 DOM 構建完成後觸發回調函式
-  document.addEventListener('DOMContentLoaded', () => {
-    // 隱藏加載畫面
-    gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+//   // 監聽 DOMContentLoaded 事件，當 DOM 構建完成後觸發回調函式
+//   document.addEventListener('DOMContentLoaded', () => {
+//     // 隱藏加載畫面
+//     gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
 
-    // 將加載後的處理代碼放在這裡，例如顯示頁面內容等
-    // ...
+//     // 將加載後的處理代碼放在這裡，例如顯示頁面內容等
+//     // ...
 
 
 
@@ -50,19 +50,19 @@ const showDemo = () => {
 
 
     // 數字遞增效果，設置加載進度 0% 到 100% 的過渡
-    gsap.to(loader, {
-      innerHTML: '100%',
-      duration: 3, // 設置持續時間為 3 秒
-      ease: 'power1.inOut', // 設置過渡的緩動函式
-      onUpdate: function () {
-        loader.textContent = this.progress().toFixed(0) + '%';
-      }
-    });
-  });
-};
+//     gsap.to(loader, {
+//       innerHTML: '100%',
+//       duration: 3, // 設置持續時間為 3 秒
+//       ease: 'power1.inOut', // 設置過渡的緩動函式
+//       onUpdate: function () {
+//         loader.textContent = this.progress().toFixed(0) + '%';
+//       }
+//     });
+//   });
+// };
 
   // 呼叫 showDemo 函式來觸發動畫
-  showDemo();
+  // showDemo();
 
 //眼睛轉轉
 
