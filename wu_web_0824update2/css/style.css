@@ -101,7 +101,7 @@ h1,h2,h3,p{
     /* title_2 */
     .title_2{
     /* font-size: 4rem; */
-    font-size: clamp(1.625rem, 6vw,5rem);
+    font-size: clamp(1.625rem, 4vw,5rem);
     /* line-height: 114.742%; */
     letter-spacing: 0.26rem;
     }
