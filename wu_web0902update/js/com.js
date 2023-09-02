@@ -1,3 +1,4 @@
+
 //漢堡選單關起
     // 获取菜单项
     const menuItems = document.querySelectorAll('.topbar nav ul li a');
@@ -79,7 +80,7 @@ function setupMarqueeAnimation() {
           animation.pause();
         }
       });
-  
+
       marqueeAnimations.push(animation);
     });
   }

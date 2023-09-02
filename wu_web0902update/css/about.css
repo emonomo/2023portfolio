@@ -383,6 +383,9 @@
  color:  #4FA1BB;
  font-weight: 500;
   }
+  .blue_word{
+    color: rgba(79, 161, 187,.7);
+  }
 
 .item .next {
   display: flex;

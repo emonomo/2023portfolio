@@ -210,31 +210,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
 
-          //滑動置頂
-          $('.right_gotop').click(function(){
-            $('html,body').animate({scrollTop:0},2500);
-          })
-          //置頂按鈕淡出淡入
-          $(window).scroll(function() {
-
-            if ($(window).scrollTop() > 300) {
-                $('.topbar').animate([
-                  { transform: 'translateY(0)' },
-                  { transform: 'translateY(-16.6%)' }
-                ], {
-                  duration: 2500, // 动画时长
-                  easing: 'linear' // 线性动画
-                })
-            } else {
-                $('.topbar').removeClass('follow');
-            }
-        });
-
-      marqueeContainer.addEventListener('mouseleave', function() {
-        // 鼠标离开时停止滚动
-        marqueeAnimation.pause();
-      });
-        
 
 
           // $(window).scroll(function(){
