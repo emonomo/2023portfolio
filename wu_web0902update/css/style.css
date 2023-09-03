@@ -581,6 +581,10 @@ h1,h2,h3,p{
     }
     #creativeHeading {
       flex: 0.5;
+      padding-top: 3vh;
+    }
+    #creativeHeading .heading {
+      padding-bottom: 0vh;
     }
     #below_bow .title {
       display: flex;
@@ -594,11 +598,11 @@ h1,h2,h3,p{
       margin: -2%;
     }
     #below_bow .intro_box {
-      margin-top: -16vh;
+      margin-top: -22vh;
    }
      #below_bow .face_box {
       display: flex;
-      margin-top: -2vh;
+      margin-top: 1vh;
       margin-left: 0%;
       height: 99%;
     }

@@ -580,6 +580,7 @@ h1,h2,h3,p{
     }
     #creativeHeading {
       flex: 0.5;
+      padding-top: 3vh;
     }
     #below_bow .title {
       display: flex;
@@ -605,6 +606,9 @@ h1,h2,h3,p{
       height: 114%;
       width: 100%;
    }
+   #creativeHeading .heading {
+    padding-bottom: 0vh;
+  }
   }
   
   @media (min-width: 821px) and (max-width: 1024px){
