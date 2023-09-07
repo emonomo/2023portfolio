@@ -763,6 +763,11 @@ h1,h2,h3,p{
     left: 51%;
     top: 27%;
   }
+  #below_bow .intro_box .title_1 {
+    -webkit-text-stroke: 1px #888888;
+    color: transparent;
+    font-size: clamp(1.875rem, 8vw, 8rem);
+  }
 }
 
   @media (max-width: 430px){
@@ -784,9 +789,9 @@ h1,h2,h3,p{
       width: 75%;
     }
     .face_box .smile {
-      width: 38%;
+      width: 32%;
       top: 58%;
-      left: 30%;
+      left: 33%;
     }
     .eyebox-l {
       width: 42px;
@@ -804,7 +809,16 @@ h1,h2,h3,p{
       width: 20px;
       height: 20px;
     }
-
+    .eyebox-l::before, .eyebox-r::before {
+      position: absolute;
+      display: flex;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 50%;
+      border: .5px solid #888;
+  }
     #below_bow .title {
       /* flex: 1; */
       padding-right: 5%;
@@ -1460,16 +1474,22 @@ h1,h2,h3,p{
       #projects .face_box {
         width: 58%;
       }
+
       #projects .text {
         padding:0 7%;
       }
       #projects .face_box .emoji {
         height: 79%;
+      }  
+      #projects .face_box .smile {
+        width: 38%;
+        top: 58%;
+        left: 30%;
       }
       #projects .eyebox-l,
       #projects .eyebox-r{
         width: 28px;
-        height: 33px;
+        height: 35px;
       }
       #projects .eyebox-l{
         left: 30%;
@@ -1483,7 +1503,7 @@ h1,h2,h3,p{
 
     @media (max-width: 393px){
       #projects .face_box .emoji {
-        height: 80%;
+        height: 85%;
       }
     }
 /* --------------5.list---------------- */  
