@@ -706,7 +706,7 @@
                 -3px -4px 16px 20px rgba(0, 0, 0, 0.2) ;
  }
  .two{
-  height: 100vh;
+  height: fit-content;
  }
   .panel_with_a_index {
     height: 100vh;
