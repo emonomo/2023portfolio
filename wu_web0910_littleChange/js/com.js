@@ -16,7 +16,7 @@
  
   //  複製信箱
   function copyEmail() {
-    var emailAddress = "joanna881110@gmail.com";
+    var emailAddress = "wuchendesign@gmail.com";
   
     navigator.clipboard.writeText(emailAddress)
       .then(function() {
