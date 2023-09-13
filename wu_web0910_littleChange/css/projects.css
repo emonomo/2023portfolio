@@ -345,8 +345,8 @@ width: 82%;
 #more_info .info h1{
   padding-right: 5%;
   color: #fff;
-  transform: translateX(140%);
-  transition: transform 0.8s cubic-bezier(.62,.27,.68,.95) .2s;
+  transform: translateX(155%);
+  transition: transform 0.9s cubic-bezier(.62,.27,.68,.95) .2s;
 }
 #more_info .info small{
   color: #fff;
