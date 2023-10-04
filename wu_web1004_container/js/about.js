@@ -121,21 +121,28 @@ $(document).mousemove(function(event) {
       }
     });
 
-    ScrollTrigger.create({
-      trigger: ".one",
-      start: "top top",
-      end: "bottom bottom",
-      onLeaveBack: () => {
-        ScrollTrigger.getById("panel_with_a_index").disable(); // 禁用.panel_with_a_index的ScrollTrigger
-      }
-    });
+    // ScrollTrigger.create({
+    //   trigger: ".one",
+    //   start: "top top",
+    //   end: "bottom bottom",
+    //   onLeaveBack: () => {
+    //     // ScrollTrigger.getById("panel_with_a_index").disable(); // 禁用.panel_with_a_index的ScrollTrigger
+     
+    //     ScrollTrigger.getAll(".panel_with_a_index").forEach(trigger => {
+    //       trigger.disable();
+    //     });
+    //   }
+    // });
 
-    ScrollTrigger.create({
-      trigger: ".one",
-      start: "top top",
-      end: "bottom bottom",
-      onEnterBack: () => {
-        ScrollTrigger.getById("panel_with_a_index").enable(); // 重新启用.panel_with_a_index的ScrollTrigger
-      }
-    });
+    // ScrollTrigger.create({
+    //   trigger: ".one",
+    //   start: "top top",
+    //   end: "bottom bottom",
+    //   onEnterBack: () => {
+    //     // ScrollTrigger.getById("panel_with_a_index").enable(); // 重新启用.panel_with_a_index的ScrollTrigger
+    //     ScrollTrigger.getAll(".panel_with_a_index").forEach(trigger => {
+    //       trigger.enable(); 
+    //     });
+    //   }
+    // });
     
