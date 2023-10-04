@@ -574,13 +574,19 @@
     border-bottom: #333 1px solid;
   }
   .panel {
-    padding: 4vh 90px;
+    padding: 2vh 50px;
   }
   .topLine:first-child {
     padding-top: 1%;
     margin-top: 1%;
  }
+ .item .next {
+  padding: 0.5vh 11%;
+ }
 
+  #container .item h2 {
+    margin-bottom: 0%;
+  }
 }
 @media (min-width: 375px) and (max-width: 1024px){
   .panel {
